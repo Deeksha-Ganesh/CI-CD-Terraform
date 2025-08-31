@@ -74,7 +74,7 @@ resource "local_file" "private_key" {
 
 resource "aws_instance" "swig-user" {
   ami           = "ami-0360c520857e3138f" 
-  instance_type = "t2.micro"
+  instance_type = "t2.large"
 
   key_name               = aws_key_pair.swig-key.key_name
   vpc_security_group_ids = [aws_security_group.swig-sg.id]
